@@ -4,11 +4,11 @@ const LoadingState = () => {
       {Array.from({ length: 20 }).map((_, index) => (
         <div
           key={index}
-          className="bg-[var(--color-bg-card)] rounded-lg shadow-md p-4 animate-pulse"
+          className="bg-(--color-bg-card) rounded-lg shadow-md p-4 animate-pulse"
         >
-          <div className="w-full aspect-square bg-[var(--color-bg-skeleton)] rounded-lg mb-3 max-h-32"></div>
-          <div className="h-4 bg-[var(--color-bg-skeleton)] rounded w-3/4 mx-auto mb-2"></div>
-          <div className="h-3 bg-[var(--color-bg-skeleton)] rounded w-1/4 mx-auto"></div>
+          <div className="w-full aspect-square skeleton-base rounded-lg mb-3 max-h-32"></div>
+          <div className="h-4 skeleton-base w-3/4 mx-auto mb-2"></div>
+          <div className="h-3 skeleton-base w-1/4 mx-auto"></div>
         </div>
       ))}
     </div>

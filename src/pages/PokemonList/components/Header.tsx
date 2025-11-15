@@ -7,8 +7,8 @@ const Header = () => {
 
   return (
     <header className="mb-8 text-center">
-      <h1 className="flex items-center justify-center mb-2 text-4xl font-bold text-[var(--color-text-primary)] gap-1">
-        <span className="text-[var(--color-accent)]">⚡</span>
+      <h1 className="flex items-center justify-center mb-2 text-4xl font-bold text-(--color-text-primary) gap-1">
+        <span className="text-(--color-accent)">⚡</span>
         Pokédex
       </h1>
       <p className="text-(--color-text-secondary)">

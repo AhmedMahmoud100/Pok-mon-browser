@@ -8,22 +8,22 @@ const PokemonPhysicalStats = ({ height, weight }: PokemonPhysicalStatsProps) => 
     <div className="grid grid-cols-2 gap-6 w-full">
       <div className="text-center">
         <div className="flex items-center justify-center mb-2">
-          <svg className="w-5 h-5 text-[var(--color-text-muted)] mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-(--color-text-muted) mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
           </svg>
-          <span className="text-sm text-[var(--color-text-muted)] font-medium">Height</span>
+          <span className="text-sm text-(--color-text-muted) font-medium">Height</span>
         </div>
-        <p className="text-xl font-bold text-[var(--color-gray-800)]">{(height / 10).toFixed(1)} m</p>
+        <p className="text-xl font-bold text-(--color-gray-800)">{(height / 10).toFixed(1)} m</p>
       </div>
 
       <div className="text-center">
         <div className="flex items-center justify-center mb-2">
-          <svg className="w-5 h-5 text-[var(--color-text-muted)] mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-(--color-text-muted) mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
           </svg>
-          <span className="text-sm text-[var(--color-text-muted)] font-medium">Weight</span>
+          <span className="text-sm text-(--color-text-muted) font-medium">Weight</span>
         </div>
-        <p className="text-xl font-bold text-[var(--color-gray-800)]">{(weight / 10).toFixed(1)} kg</p>
+        <p className="text-xl font-bold text-(--color-gray-800)">{(weight / 10).toFixed(1)} kg</p>
       </div>
     </div>
   );

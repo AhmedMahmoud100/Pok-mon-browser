@@ -10,7 +10,7 @@ const ITEMS_PER_PAGE = 20;
 const PaginationView = () => {
   const { page, setPage } = useViewMode();
 
-  const { pokemonList, totalPages, startPokemon, endPokemon, currentPage } =
+  const { pokemonList, totalPages, currentPage } =
     usePaginationListData({
       itemsPerPage: ITEMS_PER_PAGE,
       page,
@@ -22,7 +22,7 @@ const PaginationView = () => {
   };
 
   return (
-    <PokemonListLayout backgroundColor="from-[var(--color-bg-pagination-start)] to-[var(--color-bg-pagination-end)]">
+    <PokemonListLayout backgroundColor="from-(--color-bg-pagination-start) to-(--color-bg-pagination-end)">
       <PokemonGrid>
         {pokemonList.map((pokemon) => (
           <PokemonCard

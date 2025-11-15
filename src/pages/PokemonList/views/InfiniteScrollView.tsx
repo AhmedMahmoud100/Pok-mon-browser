@@ -14,7 +14,7 @@ const InfiniteScrollView = () => {
     });
 
   return (
-    <PokemonListLayout backgroundColor="from-[var(--color-bg-infinite-start)] to-[var(--color-bg-infinite-end)]">
+    <PokemonListLayout backgroundColor="from-(--color-bg-infinite-start) to-(--color-bg-infinite-end)">
       <PokemonGrid>
         {pokemonList.map((pokemon) => (
           <PokemonCard

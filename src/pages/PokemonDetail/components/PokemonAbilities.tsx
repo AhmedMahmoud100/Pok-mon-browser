@@ -14,16 +14,16 @@ const PokemonAbilities = ({ abilities }: PokemonAbilitiesProps) => {
 
   return (
     <div className="mb-6">
-      <h2 className="text-xl font-bold text-[var(--color-gray-800)] mb-4">Abilities</h2>
+      <h2 className="text-xl font-bold text-(--color-gray-800) mb-4">Abilities</h2>
       <div className="flex flex-wrap gap-2">
         {abilities.map((abilityInfo) => (
           <span
             key={abilityInfo.ability.name}
-            className="bg-[var(--color-gray-100)] text-[var(--color-gray-800)] px-4 py-2 rounded-lg text-sm font-medium capitalize"
+            className="bg-(--color-gray-100) text-(--color-gray-800) px-4 py-2 rounded-lg text-sm font-medium capitalize"
           >
             {abilityInfo.ability.name.replace('-', ' ')}
             {abilityInfo.is_hidden && (
-              <span className="ml-2 text-xs text-[var(--color-text-muted)]">(Hidden)</span>
+              <span className="ml-2 text-xs text-(--color-text-muted)">(Hidden)</span>
             )}
           </span>
         ))}
