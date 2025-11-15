@@ -11,7 +11,7 @@ const Header = () => {
         <span className="text-[var(--color-accent)]">⚡</span>
         Pokédex
       </h1>
-      <p className="text-[var(--color-text-secondary)]">
+      <p className="text-(--color-text-secondary)">
         {view === ViewMode.Pagination
           ? 'Discover and explore Pokémon with page controls'
           : 'Discover and explore Pokémon with show more'}
