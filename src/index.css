@@ -79,3 +79,24 @@
     box-sizing: border-box;
   }
 }
+
+@layer utilities {
+  /* Gradient backgrounds */
+  .gradient-primary {
+    @apply bg-gradient-to-r from-(--color-gradient-start) to-(--color-gradient-end);
+  }
+
+  .gradient-skeleton {
+    @apply bg-gradient-to-r from-(--color-gradient-skeleton-start) to-(--color-gradient-skeleton-end);
+  }
+
+  /* Skeleton loading */
+  .skeleton-base {
+    @apply bg-(--color-bg-skeleton) rounded animate-pulse;
+  }
+
+  /* Common text styles */
+  .text-inverse {
+    @apply text-(--color-text-inverse);
+  }
+}
