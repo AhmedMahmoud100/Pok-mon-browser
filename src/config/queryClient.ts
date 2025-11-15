@@ -7,6 +7,8 @@ export const queryClient = new QueryClient({
       gcTime: 1000 * 60 * 10, // 10 minutes
       retry: 1,
       refetchOnWindowFocus: false,
+      suspense: true, // Enable Suspense for data fetching
+      throwOnError: true, // Propagate errors to Error Boundary
     },
   },
 });
