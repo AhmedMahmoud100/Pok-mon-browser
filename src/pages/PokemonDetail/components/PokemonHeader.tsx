@@ -7,17 +7,19 @@ const PokemonHeader = ({ name, id }: PokemonHeaderProps) => {
   const code = id.toString().padStart(4, '0')
 
   return (
-    <div className="flex flex-col items-center px-3 py-4 text-center gradient-primary">
+    <header className="flex flex-col items-center px-3 py-4 text-center gradient-primary">
       <div className="flex">
         <span className="text-3xl">⚡</span>
         <div className="flex flex-col items-center gap-4">
           <h1 className="text-3xl font-bold text-inverse">
-            <span>{name}</span>
+            {name}
           </h1>
-          <p className="text-base text-inverse">#{code}</p>
+          <p className="text-base text-inverse" aria-label={`Pokemon number ${id}`}>
+            #{code}
+          </p>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
