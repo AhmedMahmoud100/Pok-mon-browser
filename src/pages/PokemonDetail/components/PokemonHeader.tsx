@@ -4,12 +4,19 @@ interface PokemonHeaderProps {
 }
 
 const PokemonHeader = ({ name, id }: PokemonHeaderProps) => {
+  const code = id.toString().padStart(4, '0')
+
   return (
-    <div className="gradient-primary p-3 text-center">
-      <h1 className="text-3xl font-bold text-inverse mb-1 flex items-center justify-center">
-        ⚡{name}
-      </h1>
-      <p className="text-inverse text-lg">#{id.toString().padStart(4, '0')}</p>
+    <div className="flex flex-col items-center px-3 py-4 text-center gradient-primary">
+      <div className="flex">
+        <span className="text-3xl">⚡</span>
+        <div className="flex flex-col items-center gap-4">
+          <h1 className="text-3xl font-bold text-inverse">
+            <span>{name}</span>
+          </h1>
+          <p className="text-base text-inverse">#{code}</p>
+        </div>
+      </div>
     </div>
   );
 };
