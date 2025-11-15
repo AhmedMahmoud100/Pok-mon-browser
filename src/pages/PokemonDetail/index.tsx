@@ -28,10 +28,10 @@ const PokemonDetail = () => {
 
   return (
     <PokemonDetailLayout>
-      <div className="overflow-hidden bg-white shadow-sm rounded-2xl">
+      <div className="mt-8 bg-white shadow-sm ove4rflow-hidden rounded-2xl">
         <PokemonHeader name={displayName} id={pokemon.id} />
 
-        <div className="grid grid-cols-1 gap-8 p-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 p-6 md:grid-cols-2">
           {/* Left Side - Image and Details */}
           <div className="flex flex-col items-center">
             <PokemonImage imageUrl={imageUrl} name={displayName} />

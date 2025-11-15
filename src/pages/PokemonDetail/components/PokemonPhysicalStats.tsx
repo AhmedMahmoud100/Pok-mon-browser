@@ -5,7 +5,7 @@ interface PokemonPhysicalStatsProps {
 
 const PokemonPhysicalStats = ({ height, weight }: PokemonPhysicalStatsProps) => {
   return (
-    <div className="grid grid-cols-2 gap-6 w-full">
+    <div className="grid grid-cols-2 gap-4 w-full">
       <div className="text-center">
         <div className="flex items-center justify-center mb-2">
           <svg className="w-5 h-5 text-(--color-text-muted) mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -13,7 +13,7 @@ const PokemonPhysicalStats = ({ height, weight }: PokemonPhysicalStatsProps) => 
           </svg>
           <span className="text-sm text-(--color-text-muted) font-medium">Height</span>
         </div>
-        <p className="text-xl font-bold text-(--color-gray-800)">{(height / 10).toFixed(1)} m</p>
+        <p className="text-lg font-bold text-(--color-gray-800)">{(height / 10).toFixed(1)} m</p>
       </div>
 
       <div className="text-center">
@@ -23,7 +23,7 @@ const PokemonPhysicalStats = ({ height, weight }: PokemonPhysicalStatsProps) => 
           </svg>
           <span className="text-sm text-(--color-text-muted) font-medium">Weight</span>
         </div>
-        <p className="text-xl font-bold text-(--color-gray-800)">{(weight / 10).toFixed(1)} kg</p>
+        <p className="text-lg font-bold text-(--color-gray-800)">{(weight / 10).toFixed(1)} kg</p>
       </div>
     </div>
   );
