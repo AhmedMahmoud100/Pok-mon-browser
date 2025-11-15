@@ -1,7 +1,7 @@
 const LoadingSpinner = () => {
   return (
     <svg
-      className="animate-spin h-5 w-5 text-green-600"
+      className="animate-spin h-5 w-5 text-[var(--color-spinner)]"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
