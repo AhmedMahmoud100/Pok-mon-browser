@@ -8,24 +8,26 @@ export const getPaginationPages = (
   const pages: number[] = [];
 
   if (totalPages <= maxVisible) {
-    // Show all pages if total is 5 or less
+    // Show all pages if total is less than or equal to maxVisible
     for (let i = 1; i <= totalPages; i++) {
       pages.push(i);
     }
   } else {
-    // If current page is in the first 5 pages
-    if (currentPage <= 4) {
-      for (let i = 1; i <= 5; i++) {
+    const halfVisible = Math.floor(maxVisible / 2);
+
+    // If current page is near the start
+    if (currentPage <= maxVisible - halfVisible) {
+      for (let i = 1; i <= maxVisible; i++) {
         pages.push(i);
       }
       pages.push(ELLIPSIS);
       pages.push(totalPages);
     }
-    // If current page is in the last 5 pages
-    else if (currentPage >= totalPages - 3) {
+    // If current page is near the end
+    else if (currentPage >= totalPages - (maxVisible - halfVisible - 1)) {
       pages.push(1);
       pages.push(ELLIPSIS);
-      for (let i = totalPages - 4; i <= totalPages; i++) {
+      for (let i = totalPages - maxVisible + 1; i <= totalPages; i++) {
         pages.push(i);
       }
     }
@@ -33,7 +35,7 @@ export const getPaginationPages = (
     else {
       pages.push(1);
       pages.push(ELLIPSIS);
-      for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+      for (let i = currentPage - halfVisible; i <= currentPage + halfVisible; i++) {
         pages.push(i);
       }
       pages.push(ELLIPSIS);
