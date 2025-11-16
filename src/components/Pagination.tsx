@@ -43,7 +43,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }: PaginationProps) 
       <div className="flex gap-0.5 sm:gap-1">
         {pageNumbers.map((page, index) =>
           page === ELLIPSIS ? (
-            <span key={`ellipsis-${index}`} className="px-1 py-1.5 text-base sm:px-2 text-[--color-text-secondary]">
+            <span key={`ellipsis-${index}`} className="px-1 py-1.5 text-base sm:px-2 text-[var(--color-text-secondary)]">
               ...
             </span>
           ) : (

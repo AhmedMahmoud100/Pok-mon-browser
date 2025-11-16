@@ -23,7 +23,7 @@ const PokemonAbilities = ({ abilities }: PokemonAbilitiesProps) => {
           >
             {abilityInfo.ability.name.replace('-', ' ')}
             {abilityInfo.is_hidden && (
-              <span className="ml-2 text-xs text-[--color-text-secondary]">(Hidden)</span>
+              <span className="ml-2 text-xs text-[var(--color-text-secondary)]">(Hidden)</span>
             )}
           </span>
         ))}

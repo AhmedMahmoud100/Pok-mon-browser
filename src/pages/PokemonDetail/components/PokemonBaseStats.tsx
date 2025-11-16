@@ -26,11 +26,11 @@ const PokemonBaseStats = ({ stats }: PokemonBaseStatsProps) => {
             <div key={statInfo.stat.name}>
               <div className="flex justify-between mb-1">
                 <span className="text-sm font-semibold text-gray-700">{statName}</span>
-                <span className="text-sm font-bold text-[--color-text-primary]">{statInfo.base_stat}</span>
+                <span className="text-sm font-bold text-[var(--color-text-primary)]">{statInfo.base_stat}</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div
-                  className="bg-[--color-btn-primary] h-2 rounded-full transition-all duration-500"
+                  className="bg-[var(--color-btn-primary)] h-2 rounded-full transition-all duration-500"
                   style={{ width: `${percentage}%` }}
                 ></div>
               </div>

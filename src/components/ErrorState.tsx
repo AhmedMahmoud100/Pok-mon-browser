@@ -8,7 +8,7 @@ const ErrorState = ({ message = 'Something went wrong', onRetry }: ErrorStatePro
     <div className="flex flex-col items-center justify-center py-16 px-4">
       <div className="text-6xl mb-4">😕</div>
       <h2 className="text-2xl font-bold text-gray-800 mb-2">Oops!</h2>
-      <p className="text-[--color-text-secondary] mb-6 text-center">{message}</p>
+      <p className="text-[var(--color-text-secondary)] mb-6 text-center">{message}</p>
       {onRetry && (
         <button
           onClick={onRetry}

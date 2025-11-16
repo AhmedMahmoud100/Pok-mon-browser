@@ -11,7 +11,7 @@ const LoadMoreButton = ({ onClick, isLoading = false }: LoadMoreButtonProps) => 
     return (
       <div className="flex justify-center items-center gap-2 mt-8">
         <LoadingSpinner />
-        <span className="text-[--color-text-secondary] text-sm">Loading more Pokémon...</span>
+        <span className="text-[var(--color-text-secondary)] text-sm">Loading more Pokémon...</span>
       </div>
     );
   }
