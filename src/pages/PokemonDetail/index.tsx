@@ -28,7 +28,7 @@ const PokemonDetail = () => {
 
   return (
     <PokemonDetailLayout>
-      <div className="mt-8 bg-white shadow-sm ove4rflow-hidden rounded-2xl">
+      <div className="mt-8 bg-white shadow-sm overflow-hidden rounded-2xl">
         <PokemonHeader name={displayName} id={pokemon.id} />
 
         <div className="grid grid-cols-1 gap-6 p-6 md:grid-cols-2">

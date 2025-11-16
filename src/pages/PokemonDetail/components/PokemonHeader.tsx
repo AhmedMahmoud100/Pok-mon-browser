@@ -7,7 +7,7 @@ const PokemonHeader = ({ name, id }: PokemonHeaderProps) => {
   const code = id.toString().padStart(4, '0')
 
   return (
-    <header className="flex flex-col items-center px-3 py-4 text-center gradient-primary">
+    <header className="flex flex-col items-center px-3 py-4 text-center gradient-primary rounded-t-2xl">
       <div className="flex">
         <span className="text-3xl">⚡</span>
         <div className="flex flex-col items-center gap-4">
