@@ -14,7 +14,7 @@ const InfiniteScrollView = () => {
     });
 
   return (
-    <PokemonListLayout backgroundColor="from-(--color-bg-infinite-start) to-(--color-bg-infinite-end)">
+    <PokemonListLayout backgroundColor="from-emerald-50 to-green-200">
       <PokemonGrid>
         {pokemonList.map((pokemon) => (
           <PokemonCard
@@ -29,7 +29,7 @@ const InfiniteScrollView = () => {
         <LoadMoreButton onClick={fetchNextPage} isLoading={isFetchingNextPage} />
       )}
 
-      <div className="mt-4 text-center text-(--color-text-secondary)">
+      <div className="mt-4 text-center text-[--color-text-secondary]">
         Showing {totalCount} Pokémon
       </div>
     </PokemonListLayout>
