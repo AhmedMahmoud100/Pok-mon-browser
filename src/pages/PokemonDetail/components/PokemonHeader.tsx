@@ -11,10 +11,10 @@ const PokemonHeader = ({ name, id }: PokemonHeaderProps) => {
       <div className="flex">
         <span className="text-3xl">⚡</span>
         <div className="flex flex-col items-center gap-4">
-          <h1 className="text-3xl font-bold text-inverse">
+          <h1 className="text-3xl font-bold text-white">
             {name}
           </h1>
-          <p className="text-base text-inverse" aria-label={`Pokemon number ${id}`}>
+          <p className="text-base text-white" aria-label={`Pokemon number ${id}`}>
             #{code}
           </p>
         </div>

@@ -17,9 +17,9 @@ const PokemonCard = ({ name, url, imageUrl }: PokemonCardProps) => {
   return (
     <Link
       to={`/pokemon/${pokemonId}`}
-      className="bg-(--color-bg-card) rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-4 flex flex-col items-center group"
+      className="bg-[--color-bg-card] rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-4 flex flex-col items-center group"
     >
-      <div className="w-full aspect-square flex items-center justify-center mb-3 bg-(--color-bg-hover) rounded-lg overflow-hidden max-h-36">
+      <div className="w-full aspect-square flex items-center justify-center mb-3 bg-[--color-bg-hover] rounded-lg overflow-hidden max-h-36">
         <img
           src={displayImage}
           alt={displayName}
@@ -27,10 +27,10 @@ const PokemonCard = ({ name, url, imageUrl }: PokemonCardProps) => {
           loading="lazy"
         />
       </div>
-      <h3 className="text-base font-semibold text-(--color-gray-800) text-center">
+      <h3 className="text-base font-semibold text-gray-800 text-center">
         {displayName}
       </h3>
-      <p className="text-xs text-(--color-text-muted)">#{pokemonId.toString().padStart(3, '0')}</p>
+      <p className="text-xs text-[--color-text-secondary]">#{pokemonId.toString().padStart(3, '0')}</p>
     </Link>
   );
 };

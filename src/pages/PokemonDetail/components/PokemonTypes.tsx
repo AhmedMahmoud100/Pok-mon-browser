@@ -17,7 +17,7 @@ const PokemonTypes = ({ types, getTypeColor }: PokemonTypesProps) => {
       {types.map((typeInfo) => (
         <span
           key={typeInfo.type.name}
-          className={`${getTypeColor(typeInfo.type.name)} text-inverse px-4 py-1 rounded-full text-xs font-semibold uppercase`}
+          className={`${getTypeColor(typeInfo.type.name)} text-white px-4 py-1 rounded-full text-xs font-semibold uppercase`}
         >
           {typeInfo.type.name}
         </span>

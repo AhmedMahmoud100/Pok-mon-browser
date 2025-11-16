@@ -11,7 +11,7 @@ const PokemonDetailLayout = ({ children }: PokemonDetailLayoutProps) => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen px-4 py-4 bg-gradient-to-br from-(--color-bg-detail-start) to-(--color-bg-detail-end)">
+    <div className="min-h-screen px-4 py-4 bg-gradient-to-br from-pink-50 to-pink-200">
       <div className="mx-auto max-w-7xl">
         <Button
           onClick={() => navigate(-1)}

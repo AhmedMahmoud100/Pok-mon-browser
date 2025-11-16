@@ -1,6 +1,6 @@
 const PokemonDetailSkeleton = () => {
   return (
-    <div className="min-h-screen bg-(--color-bg-detail) py-8 px-4">
+    <div className="min-h-screen bg-pink-100 py-8 px-4">
       <div className="max-w-3xl mx-auto">
         {/* Back Button Skeleton */}
         <div className="mb-6 flex items-center gap-2">
@@ -8,7 +8,7 @@ const PokemonDetailSkeleton = () => {
         </div>
 
         {/* Card Skeleton */}
-        <div className="bg-(--color-bg-card) rounded-2xl shadow-sm overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
           {/* Header Skeleton */}
           <div className="gradient-skeleton p-8 text-center animate-pulse">
             <div className="h-10 w-48 bg-white/30 rounded mx-auto mb-2"></div>

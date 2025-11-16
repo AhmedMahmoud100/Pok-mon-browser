@@ -33,13 +33,13 @@ const Button = ({
   };
 
   const variantClasses = {
-    primary: 'bg-(--color-btn-primary-bg) hover:bg-(--color-btn-primary-hover) text-(--color-btn-primary-text) font-semibold',
+    primary: 'bg-[--color-btn-primary] hover:bg-[--color-btn-primary-hover] text-white font-semibold',
     secondary: isActive
-      ? 'bg-(--color-btn-secondary-active-bg) text-(--color-btn-secondary-active-text)'
-      : 'bg-(--color-btn-secondary-bg) text-(--color-btn-secondary-text) border border-(--color-border) hover:bg-(--color-btn-secondary-hover) font-semibold',
+      ? 'bg-[--color-btn-primary-hover] text-white'
+      : 'bg-[--color-btn-secondary] text-gray-700 border border-gray-300 hover:bg-[--color-btn-secondary-hover] font-semibold',
     ghost: isActive
-      ? 'bg-(--color-btn-secondary-active-bg) text-(--color-btn-secondary-active-text)'
-      : 'bg-(--color-btn-secondary-bg) border border-(--color-border) text-(--color-btn-secondary-text) hover:bg-(--color-btn-secondary-hover)'
+      ? 'bg-[--color-btn-primary-hover] text-white'
+      : 'bg-[--color-btn-secondary] border border-gray-300 text-gray-700 hover:bg-[--color-btn-secondary-hover]'
   };
 
   const baseClasses = `leading-[18px] flex items-center justify-center gap-0.5 rounded-md transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;

@@ -22,7 +22,7 @@ const PaginationView = () => {
   };
 
   return (
-    <PokemonListLayout backgroundColor="from-(--color-bg-pagination-start) to-(--color-bg-pagination-end)">
+    <PokemonListLayout backgroundColor="from-sky-50 to-blue-100">
       <PokemonGrid>
         {pokemonList.map((pokemon) => (
           <PokemonCard
@@ -39,7 +39,7 @@ const PaginationView = () => {
         onPageChange={handlePageChange}
       />
 
-      <div className="mt-4 text-center text-(--color-text-secondary)">
+      <div className="mt-4 text-center text-[--color-text-secondary]">
         {`Page ${currentPage} of ${totalPages} (${pokemonList.length} Pokémon shown)`}
       </div>
     </PokemonListLayout>
