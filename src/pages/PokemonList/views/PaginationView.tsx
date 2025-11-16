@@ -2,6 +2,7 @@ import PokemonCard from '../components/PokemonCard';
 import PokemonGrid from '../../../components/PokemonGrid';
 import Pagination from '../../../components/Pagination';
 import PokemonListLayout from '../components/PokemonListLayout';
+import SkeletonCard from '../components/SkeletonCard';
 import { usePaginationListData } from '../hooks/usePaginationListData';
 import { useViewMode } from '../hooks/useViewMode';
 
@@ -10,7 +11,7 @@ const ITEMS_PER_PAGE = 20;
 const PaginationView = () => {
   const { page, setPage } = useViewMode();
 
-  const { pokemonList, totalPages, currentPage } =
+  const { pokemonList, totalPages, currentPage, isFetching } =
     usePaginationListData({
       itemsPerPage: ITEMS_PER_PAGE,
       page,
@@ -21,16 +22,22 @@ const PaginationView = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const showSkeletons = isFetching && pokemonList.length === 0;
+
   return (
     <PokemonListLayout backgroundColor="from-sky-50 to-blue-100">
       <PokemonGrid>
-        {pokemonList.map((pokemon) => (
-          <PokemonCard
-            key={pokemon.url}
-            name={pokemon.name}
-            url={pokemon.url}
-          />
-        ))}
+        {showSkeletons
+          ? Array.from({ length: ITEMS_PER_PAGE }).map((_, index) => (
+              <SkeletonCard key={index} />
+            ))
+          : pokemonList.map((pokemon) => (
+              <PokemonCard
+                key={pokemon.url}
+                name={pokemon.name}
+                url={pokemon.url}
+              />
+            ))}
       </PokemonGrid>
 
       <Pagination

@@ -8,7 +8,7 @@ interface UsePaginationListDataParams {
 const TOTAL_POKEMON = 151; // Gen 1 Pokemon
 
 export const usePaginationListData = ({ itemsPerPage, page }: UsePaginationListDataParams) => {
-  const { data: pokemonData } = usePokemonList(
+  const { data: pokemonData, isLoading, isFetching } = usePokemonList(
     itemsPerPage,
     (page - 1) * itemsPerPage
   );
@@ -23,5 +23,7 @@ export const usePaginationListData = ({ itemsPerPage, page }: UsePaginationListD
     startPokemon,
     endPokemon,
     currentPage: page,
+    isLoading,
+    isFetching,
   };
 };
